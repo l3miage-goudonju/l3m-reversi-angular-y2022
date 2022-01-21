@@ -151,7 +151,7 @@ ${this.whereCanPlay().map(P => `  * ${P}`).join("\n")}
     let myBoard = this.board.map(r => r.slice()) as Board;
     let myTurn = this.turn;
     if (L.length > 0) {
-      [...L, [i, j]].forEach( ([i, j]) => myBoard[i][j] = myTurn );
+      [...L, [i, j]].forEach(([i, j]) => myBoard[i][j] = myTurn);
       myTurn = (this.turn === 'Player1' ? 'Player2' : 'Player1');
       this.gameStateSubj.next({
         turn: myTurn,
